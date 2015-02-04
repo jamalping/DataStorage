@@ -14,6 +14,7 @@
 		738044541A81C21900E02E4F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 738044531A81C21900E02E4F /* Images.xcassets */; };
 		738044571A81C21900E02E4F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 738044551A81C21900E02E4F /* LaunchScreen.xib */; };
 		738044631A81C21900E02E4F /* DataStorageTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 738044621A81C21900E02E4F /* DataStorageTests.m */; };
+		7380446E1A81CCF200E02E4F /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 7380446D1A81CCF200E02E4F /* Person.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 		7380445C1A81C21900E02E4F /* DataStorageTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DataStorageTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		738044611A81C21900E02E4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		738044621A81C21900E02E4F /* DataStorageTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DataStorageTests.m; sourceTree = "<group>"; };
+		7380446C1A81CCF200E02E4F /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		7380446D1A81CCF200E02E4F /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +88,8 @@
 				7380444B1A81C21900E02E4F /* AppDelegate.m */,
 				7380444D1A81C21900E02E4F /* ViewController.h */,
 				7380444E1A81C21900E02E4F /* ViewController.m */,
+				7380446C1A81CCF200E02E4F /* Person.h */,
+				7380446D1A81CCF200E02E4F /* Person.m */,
 				738044501A81C21900E02E4F /* Main.storyboard */,
 				738044531A81C21900E02E4F /* Images.xcassets */,
 				738044551A81C21900E02E4F /* LaunchScreen.xib */,
@@ -221,6 +226,7 @@
 			files = (
 				7380444F1A81C21900E02E4F /* ViewController.m in Sources */,
 				7380444C1A81C21900E02E4F /* AppDelegate.m in Sources */,
+				7380446E1A81CCF200E02E4F /* Person.m in Sources */,
 				738044491A81C21900E02E4F /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
