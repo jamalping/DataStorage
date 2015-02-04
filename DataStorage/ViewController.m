@@ -86,7 +86,7 @@
     
 //----------------------------------归档--------------------------------------------
     // 归档是自定义的对象要实现NSCoding协议
-    NSString *filePath = [self getFilePathWithFileName:@"ArchiverFile"];
+    NSString *filePath = [self getFilePathWithFileName:@"ArchiverArray"];
     if ([NSKeyedArchiver archiveRootObject:array1 toFile:filePath]) { // 如果存进去了
         NSLog(@"archiver success!");
         // 解归档
@@ -94,6 +94,15 @@
         for (Person *person in archiverArray) {
             NSLog(@"person.name = %@",person.name);
         }
+    }
+    
+    NSString *filePathDic = [self getFilePathWithFileName:@"ArchiverDic"];
+    if ([NSKeyedArchiver archiveRootObject:dic toFile:filePathDic]) { // 如果存进去了
+        NSLog(@"archiver success!");
+        // 解归档
+        NSDictionary *archiverDic = [NSKeyedUnarchiver unarchiveObjectWithFile:filePathDic];
+        Person *person = archiverDic[@"jack"];
+        NSLog(@"archiver dic person name = %@",person.name);
     }
 }
 
