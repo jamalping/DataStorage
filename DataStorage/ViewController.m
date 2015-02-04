@@ -84,7 +84,7 @@
     Person *person = cDic[@"jack"];
     NSLog(@"person name = %@",person.name);
     
-//----------------------------------归档--------------------------------------------
+//------------------------------归档----------------------------------------
     // 归档是自定义的对象要实现NSCoding协议
     NSString *filePath = [self getFilePathWithFileName:@"ArchiverArray"];
     if ([NSKeyedArchiver archiveRootObject:array1 toFile:filePath]) { // 如果存进去了
@@ -104,6 +104,7 @@
         Person *person = archiverDic[@"jack"];
         NSLog(@"archiver dic person name = %@",person.name);
     }
+//------------------------------SQLite(FMDB)----------------------------------------
 }
 
 /**
