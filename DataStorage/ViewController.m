@@ -10,6 +10,7 @@
 
 #import "ViewController.h"
 #import "Person.h"
+#import "FMDB.h"
 
 @interface ViewController ()
 
@@ -104,7 +105,39 @@
         Person *person = archiverDic[@"jack"];
         NSLog(@"archiver dic person name = %@",person.name);
     }
-//------------------------------SQLite(FMDB)----------------------------------------
+//-------------------------------SQLite（这里我们使用FMDB）---------------------------------------
+    // 创建数据库
+    NSString *databasePath = [self getFilePathWithFileName:@"test.db"];
+    FMDatabase *db = [FMDatabase databaseWithPath:databasePath];
+    /// 保证数据库是打开的
+    if (![db open]) {
+        NSLog(@"cann't open the database!");
+        return;
+    }
+    /// 建表
+    [db executeUpdate:@"CREATE TABLE PersonList (Name text, Age integer, Sex integer, Phone text, Address text, Photo blob)"];
+    // 插入数据
+    // NSString，integer对应NSNumber，blob则是NSData
+    [db executeUpdate:@"INSERT INTO PersonList(Name,Age,Sex,Phone,Address,Photo) VALUES(?,?,?,?,?,?)",@"jack",[NSNumber numberWithInt:23],[NSNumber numberWithInt:1],@"135657",@"深圳福田",[NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Whiteball@2x" ofType:@"png"]]];
+    // 更新
+    [db executeUpdate:@"UPDATE PersonList SET Age = ? WHERE Name = ?",[NSNumber numberWithInt:30],@"jack"];
+    //取得资料
+    //取得特定的资料，则需使用FMResultSet物件接收传回的内容
+    //用[rs next]可以轮询query回来的资料，每一次的next可以得到一个row裡对应的数值，并用[rs stringForColumn:]或[rs intForColumn:]等方法把值转成Object-C的型态。取用完资料后则用[rs close]把结果关闭。
+    FMResultSet *rs = [db executeQuery:@"SELECT Name,Age,Sex,Address FROM PersonList"];
+    while ([rs next]) {
+        NSString *name = [rs stringForColumn:@"Name"];
+        NSString *Address = [rs stringForColumn:@"Address"];
+        NSInteger age = [rs intForColumn:@"Age"];
+        NSInteger sex = [rs intForColumn:@"Sex"];
+        NSLog(@"Name = %@,address = %@,age = %d, Sex = %d",name,Address,age,sex);
+    }
+    [rs close];
+    
+    //    －快速取得资料
+    //    在有些时候，只会query某一个row裡特定的一个数值（比方只是要找John的年龄），FMDB提供了几个比较简便的方法。这些方法定义在FMDatabaseAdditions.h，如果要使用，记得先import进来。
+    NSInteger age = [db intForQuery:@"SELECT Age FROM PersonList where Name = ?",@"jack"];
+    NSLog(@"jack's age = %d",age);
 }
 
 /**
