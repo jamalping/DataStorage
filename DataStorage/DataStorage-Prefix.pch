@@ -1,0 +1,25 @@
+//
+//  DataStorage-Prefix.pch
+//  DataStorage
+//
+//  Created by jamalping on 15-2-5.
+//  Copyright (c) 2015年 jamalping. All rights reserved.
+//
+#import <Availability.h>
+
+#ifndef __IPHONE_6_0
+#warning "This project uses features only available in iOS SDK 3.0 and later."
+#endif
+
+#ifndef DataStorage_DataStorage_Prefix_pch
+#define DataStorage_DataStorage_Prefix_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif
+
+#ifdef __OBJC__
+    #import <Foundation/Foundation.h>
+    #import <CoreData/CoreData.h>
+#endif

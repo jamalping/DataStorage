@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7301AFC61A8332F900F4F631 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7301AFC51A8332F900F4F631 /* CoreData.framework */; };
 		7346050A1A831B3D00FCA03E /* Whiteball@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 734605091A831B3D00FCA03E /* Whiteball@2x.png */; };
 		7346051C1A831B8E00FCA03E /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 734605121A831B8E00FCA03E /* FMDatabase.m */; };
 		7346051D1A831B8E00FCA03E /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 734605141A831B8E00FCA03E /* FMDatabaseAdditions.m */; };
@@ -23,6 +24,8 @@
 		738044571A81C21900E02E4F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 738044551A81C21900E02E4F /* LaunchScreen.xib */; };
 		738044631A81C21900E02E4F /* DataStorageTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 738044621A81C21900E02E4F /* DataStorageTests.m */; };
 		7380446E1A81CCF200E02E4F /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 7380446D1A81CCF200E02E4F /* Person.m */; };
+		73C3B3A11A83546C0095DCAF /* test.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 73C3B39F1A83546C0095DCAF /* test.xcdatamodeld */; };
+		73C3B3A41A8355530095DCAF /* Sdudent.m in Sources */ = {isa = PBXBuildFile; fileRef = 73C3B3A31A8355530095DCAF /* Sdudent.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7301AFC51A8332F900F4F631 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		7301AFC71A8333CF00F4F631 /* DataStorage-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DataStorage-Prefix.pch"; sourceTree = "<group>"; };
 		734605091A831B3D00FCA03E /* Whiteball@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Whiteball@2x.png"; sourceTree = "<group>"; };
 		734605111A831B8E00FCA03E /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
 		734605121A831B8E00FCA03E /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
@@ -65,6 +70,9 @@
 		738044621A81C21900E02E4F /* DataStorageTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DataStorageTests.m; sourceTree = "<group>"; };
 		7380446C1A81CCF200E02E4F /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
 		7380446D1A81CCF200E02E4F /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		73C3B3A01A83546C0095DCAF /* test.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = test.xcdatamodel; sourceTree = "<group>"; };
+		73C3B3A21A8355530095DCAF /* Sdudent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sdudent.h; sourceTree = "<group>"; };
+		73C3B3A31A8355530095DCAF /* Sdudent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sdudent.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7301AFC61A8332F900F4F631 /* CoreData.framework in Frameworks */,
 				734605241A831BD100FCA03E /* Foundation.framework in Frameworks */,
 				734605221A831BCD00FCA03E /* libsqlite3.0.dylib in Frameworks */,
 			);
@@ -90,10 +99,21 @@
 		7301AFC11A831CD100F4F631 /* Library and FrameWork */ = {
 			isa = PBXGroup;
 			children = (
+				7301AFC51A8332F900F4F631 /* CoreData.framework */,
 				734605231A831BD100FCA03E /* Foundation.framework */,
 				734605211A831BCD00FCA03E /* libsqlite3.0.dylib */,
 			);
 			name = "Library and FrameWork";
+			sourceTree = "<group>";
+		};
+		7301AFCC1A83407900F4F631 /* core data */ = {
+			isa = PBXGroup;
+			children = (
+				73C3B39F1A83546C0095DCAF /* test.xcdatamodeld */,
+				73C3B3A21A8355530095DCAF /* Sdudent.h */,
+				73C3B3A31A8355530095DCAF /* Sdudent.m */,
+			);
+			name = "core data";
 			sourceTree = "<group>";
 		};
 		7346050F1A831B5900FCA03E /* External Frameworks and Libraries */ = {
@@ -124,6 +144,7 @@
 		7380443A1A81C21900E02E4F = {
 			isa = PBXGroup;
 			children = (
+				7301AFCC1A83407900F4F631 /* core data */,
 				7301AFC11A831CD100F4F631 /* Library and FrameWork */,
 				734605101A831B8E00FCA03E /* fmdb */,
 				7346050F1A831B5900FCA03E /* External Frameworks and Libraries */,
@@ -165,6 +186,7 @@
 			children = (
 				738044471A81C21900E02E4F /* Info.plist */,
 				738044481A81C21900E02E4F /* main.m */,
+				7301AFC71A8333CF00F4F631 /* DataStorage-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -292,7 +314,9 @@
 				7380444C1A81C21900E02E4F /* AppDelegate.m in Sources */,
 				7380446E1A81CCF200E02E4F /* Person.m in Sources */,
 				7346051C1A831B8E00FCA03E /* FMDatabase.m in Sources */,
+				73C3B3A11A83546C0095DCAF /* test.xcdatamodeld in Sources */,
 				7346051E1A831B8E00FCA03E /* FMDatabasePool.m in Sources */,
+				73C3B3A41A8355530095DCAF /* Sdudent.m in Sources */,
 				734605201A831B8E00FCA03E /* FMResultSet.m in Sources */,
 				738044491A81C21900E02E4F /* main.m in Sources */,
 				7346051D1A831B8E00FCA03E /* FMDatabaseAdditions.m in Sources */,
@@ -421,6 +445,8 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DataStorage/DataStorage-Prefix.pch";
 				INFOPLIST_FILE = DataStorage/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
@@ -439,6 +465,8 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DataStorage/DataStorage-Prefix.pch";
 				INFOPLIST_FILE = DataStorage/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
@@ -514,6 +542,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		73C3B39F1A83546C0095DCAF /* test.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				73C3B3A01A83546C0095DCAF /* test.xcdatamodel */,
+			);
+			currentVersion = 73C3B3A01A83546C0095DCAF /* test.xcdatamodel */;
+			path = test.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 7380443B1A81C21900E02E4F /* Project object */;
 }
